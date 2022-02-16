@@ -1,0 +1,9 @@
+{
+ "Cron": "0 0/1 * * * *",
+ "Enable": true,
+ "FileModSpace": 60,
+ "HideOnClose": true,
+ "RemoteArr": "",
+ "ReportDir": "D:\\Code\\amazon-report-chrome\\uploadgo",
+ "Version": ""
+}

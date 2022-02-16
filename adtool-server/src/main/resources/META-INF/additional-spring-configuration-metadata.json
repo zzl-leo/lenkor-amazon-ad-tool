@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "adtool.email.report-from",
+      "type": "java.lang.String",
+      "description": "广播报表的发件人，一般为亚马逊"
+    }
+  ]
+}

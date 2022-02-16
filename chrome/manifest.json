@@ -1,0 +1,70 @@
+{
+  "manifest_version": 2,
+  "name": "ADTool",
+  "version": "1.0.2",
+  "description": "亚马逊报表下载插件",
+  "icons": {
+    "16": "images/favicon.ico",
+    "48": "images/favicon.ico",
+    "128": "images/favicon.ico"
+  },
+  "background": {
+    "_comment": "下面代码的引入需要考虑依赖的先后顺序,一般来说 schedule.js 作为定时任务启动，应该放在最后",
+    "scripts": [
+      "plugs/qs_6.9.1.js",
+      "common/common.js",
+      "background/ADTool.js",
+      "background/config.js",
+      "background/log.js",
+      "background/sellersites.js",
+      "background/setting.js",
+      "background/ams.js",
+      "background/baseReport.js",
+      "background/payment.js",
+      "background/bsreport.js",
+      "background/sbvideocp.js",
+      "background/sbvideoc.js",
+      "background/spSearchTerm.js",
+      "background/schedule.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "images/favicon.ico"
+    },
+    "default_title": "亚马逊报表下载插件",
+    "default_popup": "./popup-vue/index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://sellercentral.amazon.co.uk/*",
+        "*://sellercentral.amazon.de/*",
+        "*://sellercentral.amazon.fr/*",
+        "*://sellercentral.amazon.it/*",
+        "*://sellercentral.amazon.es/*",
+        "*://sellercentral.amazon.nl/*",
+        "*://sellercentral.amazon.ca/*",
+        "*://sellercentral.amazon.com/*",
+        "*://sellercentral.amazon.com.br/*",
+        "*://sellercentral.amazon.com.mx/*",
+        "*://sellercentral.amazon.com.au/*",
+        "*://sellercentral.amazon.sg/*",
+        "*://sellercentral-japan.amazon.com/*"
+      ],
+      "js": [
+        "content_scripts/index.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "downloads",
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "notifications"
+  ]
+}

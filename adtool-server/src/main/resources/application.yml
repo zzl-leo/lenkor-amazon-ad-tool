@@ -1,0 +1,18 @@
+
+# OSS相关配置信息
+aliyun:
+  oss:
+    endpoint: oss-cn-shenzhen.aliyuncs.com # oss对外服务的访问域名
+    accessKeyId: LTAI4Frt2rLRNSZRdfv # 访问身份验证中用到用户标识
+    accessKeySecret: HdrhJXg1uWJ9RqwbrNiOtl0Dz # 用户用于加密签名字符串和oss用来验证签名字符串的密钥
+    bucketName: tool-oss
+adtool:
+  email:
+    protocol: pop3  # 接收邮件需要使用 POP3 或 imap ，但 imap不支持邮件主题搜索
+    host: pop3.lenkor.cn
+    username: webaccount@lenkor.cn
+    password: Obd123456
+    report-from: Amazon Advertising  # 广告报表发件人
+    parser:   # 邮件解析
+      sbv-cp: com.lenkor.adtool.parser.SponsoredProductsParser
+      sbv-c: com.lenkor.adtool.parser.SponsoredProductsParser
